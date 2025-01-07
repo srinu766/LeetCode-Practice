@@ -1,0 +1,23 @@
+<script>
+
+
+function isPalindromeWithOutMethods(x){
+    if(x<0) return false
+
+    let original = x;
+    let reversed =0;
+
+    while(x>0){
+        lastDigit = x%10
+        reversed = reversed * 10 + lastDigit
+        x = Math.floor(x/10)
+    }
+    return original === reversed
+}
+
+
+console.log(isPalindromeWithOutMethods(121)); // Output: true
+console.log(isPalindromeWithOutMethods(-121)); // Output: false
+console.log(isPalindromeWithOutMethods(10)); // Output: false
+
+</script>
